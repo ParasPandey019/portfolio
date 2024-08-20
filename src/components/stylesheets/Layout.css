@@ -1,0 +1,201 @@
+@font-face {
+  font-family:"Gilroy";
+  src: url("./Fonts/GilroyHeavy.ttf") format("truetype");
+}
+
+/* Header */
+#navbar-container {
+  position: fixed;
+  height: 2em;
+  width: 100vw;
+  background-color: white;
+  z-index: 100;
+}
+#navbar-brand {
+  padding-top: 0.5em;
+  font-weight: bold;
+  color: #1c1b20;
+  cursor: default;
+  transition: 0.5s;
+}
+#navbar-date {
+  font-weight: bold;
+  color: #1c1b20;
+  position: fixed;
+  right: 2.5em;
+  top: 0.5em;
+}
+#navbar-brand.with-sidebar {
+  transform: translate(10em, 3em);
+}
+
+/* SideBar */
+#navbar-toggle {
+  position: fixed;
+  top: 50%;
+  left: 1.5%;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  padding: 1em;
+  font-size: 0.7em;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#navbar-toggle svg {
+  transform: rotate(90deg);
+  font-size: 2em;
+}
+.sidebar-container {
+  position: fixed;
+  height: 100vh;
+  width: 2em;
+  background-color: white;
+  z-index: 99;
+  left: 0;
+  transition: width 0.5s;
+}
+.sidebar-h:hover {
+  width: 5em;
+}
+.sidebar-x {
+  width: 80vw;
+}
+#navbar-menu {
+  position: relative;
+  top: 5em;
+  left: 7em;
+}
+#navbar-list {
+  list-style: none;
+  line-height: 2;
+  padding-left: 5em;
+}
+.side-menu-links {
+  font-family: "Gilroy", sans-serif;
+  transition: background-color 0.5s;
+}
+.side-menu-links:hover {
+  background-color: rgba(255, 88, 81, 1);
+}
+#right-sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 2em;
+  background-color: white;
+  right: 0;
+  transition: width 0.5s;
+  z-index: 1;
+}
+#right-sidebar.with-sidebar {
+  width: 20em;
+  background-color: rgba(255, 88, 81, 1);
+  transform: translateX(-2em);
+}
+#social-menu {
+  position: fixed;
+  top: 50%;
+  right: -2em;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  padding: 1em;
+  font-size: 0.7em;
+  z-index: 1;
+}
+#social-menu svg {
+  transform: rotate(90deg);
+  font-size: 2em;
+}
+.social-link {
+  padding: 0 0.2em;
+  color: inherit;
+}
+
+/* Intro */
+#intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 88, 81, 1) 50%,
+    rgba(248, 248, 248, 1) 50%
+  );
+}
+#intro-text {
+  font-family: "Gilroy", sans-serif;
+  color: #1c1b20;
+  font-size: 10rem;
+  word-wrap: break-word;
+  width: 2.7em;
+  line-height: 1;
+  cursor: pointer;
+}
+#intro-text > span {
+  color: #ff5851;
+}
+
+/* Footer */
+#foot-container {
+  position: fixed;
+  height: 2em;
+  width: 100vw;
+  background-color: white;
+  z-index: 100;
+  bottom: 0;
+}
+#top-toggle {
+  cursor: pointer;
+  padding: 1em;
+  font-size: 0.6em;
+  font-family: "Lato", sans-serif;
+  position: fixed;
+  right: 2.5em;
+  display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+  bottom: 1.5em;
+}
+#top-toggle svg {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+#scroll-prompt {
+  font-size: 0.6em;
+  font-family: "Lato", sans-serif;
+  position: fixed;
+  left: 2.5em;
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg);
+  bottom: 6.5em;
+}
+@keyframes bounce {
+  from {
+    transform: translateX(-3em);
+  }
+  to {
+    transform: translateX(-4em);
+  }
+}
+#scroll-prompt svg {
+  font-size: 1.5em;
+  animation: bounce 800ms ease-in-out infinite alternate;
+}
+#scroll-prompt-top {
+  font-size: 0.6em;
+  font-family: "Lato", sans-serif;
+  color: white;
+  position: fixed;
+  left: 46%;
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg);
+  bottom: 11.5em;
+}
+#scroll-prompt-top svg {
+  font-size: 1.5em;
+  animation: bounce 800ms ease-in-out infinite alternate;
+}

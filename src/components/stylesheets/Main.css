@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("./Fonts/LibreBaskerville-Italic.ttf") format("truetype");
+}
+
+#pic-1 {
+  background-image: url("../../media/home.jpg");
+  height: 100vh;
+}
+#main {
+  background-color: #f8f8f8;
+  height: 610vh;
+}
+
+.main-pad {
+  padding: 0 0 0 12vw;
+}
+.span-font {
+  font-family: "Libre Baskerville", serif;
+}
+.span-dot {
+  font-family: "Gilroy", sans-serif;
+}
+section {
+  padding-top: 5em !important;
+}
+
+/*About*/
+#about #flex {
+  display: flex;
+  justify-content: space-between;
+}
+#heading-about {
+  color: #ff5851;
+  display: inline-block;
+  width: 4em;
+  padding: 0 0 1em 0;
+  word-wrap: break-word;
+  line-height: 1;
+}
+#subheading-about {
+  width: 10em;
+  word-wrap: break-word;
+  line-height: 1.1;
+  color: #1c1b20;
+}
+#text-about {
+  padding: 3em 0;
+  width: 18em;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+.profile-pic {
+  height: 12em;
+  width: 12em;
+  background: url("../../media/profile.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  border: solid white 0.5em;
+}
+#pp-1 {
+  margin: 2em auto;
+}
+#pp-2 {
+  display: none;
+  margin: 0 auto;
+}
+#sidetext-about {
+  width: 30em;
+  background-color: #1c1b20;
+  color: white;
+  padding: 3em;
+  line-height: 3;
+}
+
+/* Skills */
+#pic-skills {
+  background-image: url("../../media/skills.png");
+  height: 60vh;
+  padding: 0 !important;
+}
+#heading-skills {
+  position: relative;
+  top: 0.4em;
+  color: #1c1b20;
+  width: 4em;
+  word-wrap: break-word;
+  line-height: 1;
+}
+#skills-text {
+  display: flex;
+  padding: 8vw 5vw 0 5vw;
+  justify-content: space-evenly;
+}
+#skills-text > .med-text {
+  word-wrap: break-word;
+  width: 13em;
+}
+
+/* Projects */
+#heading-projects {
+  color: #1c1b20;
+  display: inline-block;
+  width: 6em;
+  padding: 0 0 1em 0;
+  word-wrap: break-word;
+  line-height: 1;
+}
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.project-text {
+  width: 40vw;
+  word-wrap: break-word;
+}
+#game-of-21 {
+  margin: auto;
+  box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 20%);
+  border: none;
+  cursor: pointer;
+  border-radius: 1em;
+  height: 350px;
+  width: 270px;
+  background: url("../../media/project-1.png") center;
+  background-size: 19em;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.game-bg div {
+  color: #f8f8f8;
+}
+#clone-torrent {
+  background: url("../../media/project-2.gif");
+  height: 350px;
+  width: 270px;
+  background-size: 30em;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 20%);
+  border-radius: 1em;
+}
+#clone-google {
+  background: url("../../media/project-3.png");
+  height: 200px;
+  width: 275px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*Contact*/
+#heading-contact {
+  padding-bottom: 0.5em;
+  color: #414a6b;
+}
+#pic-contact {
+  background-image: url("../../media/contact.jpg");
+  width: 32em;
+  height: 18em;
+  position: relative;
+  left: -12vw;
+  background-position: center;
+}
+#contact #flex {
+  display: flex;
+  justify-content: flex-start;
+}
+#form-container {
+  position: relative;
+  right: 2em;
+}
+form {
+  padding: 1em 0;
+}
+.form-input {
+  padding: 0.5em 0.75em;
+  margin: 0.5em 0;
+  width: 30vw;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  background-color: #f8f8f8;
+}
+textarea.form-input {
+  height: 15vh;
+  resize: none;
+}
+.form-input:focus {
+  background-color: white;
+  outline: none;
+  font-family: inherit;
+}
+.form-input::placeholder {
+  font-family: "Lato", sans-serif;
+}
+
+@media all and (max-width: 1080px) {
+  #about #flex {
+    display: block;
+  }
+  #sidetext-about {
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #pp-1 {
+    display: none;
+  }
+  #pp-2 {
+    display: block;
+  }
+  #side-about {
+    display: flex;
+  }
+  #main {
+    height: 650vh;
+  }
+}
