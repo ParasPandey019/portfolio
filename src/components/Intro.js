@@ -1,21 +1,22 @@
+import { useState, useEffect, useCallback } from "react";
 
-import { useState, useEffect } from "react";
-
-// Move the `randomGreet` function outside the component
-const randomGreet = () => {
-  const greets = [
-    { name: "NAMASTE", breakAt: "2.7em" },
-    { name: "HELLO", breakAt: "2em" },
-    { name: "KONICHIWA", breakAt: "3.1em" },
-    { name: "BONJOUR", breakAt: "2.8em" },
-    { name: "HOWDY", breakAt: "2.5em" },
-  ];
-  const randNum = Math.floor(Math.random() * greets.length);
-  return greets[randNum];
-};
+// Move the `greets` array outside the component
+const greets = [
+  { name: "NAMASTE", breakAt: "2.7em" },
+  { name: "HELLO", breakAt: "2em" },
+  { name: "KONICHIWA", breakAt: "3.1em" },
+  { name: "BONJOUR", breakAt: "2.8em" },
+  { name: "HOWDY", breakAt: "2.5em" },
+];
 
 const Intro = () => {
   const [greet, setGreet] = useState({ name: "NAMASTE", breakAt: "2.7em" });
+
+  // Use useCallback with an empty dependency array since greets is now stable
+  const randomGreet = useCallback(() => {
+    const randNum = Math.floor(Math.random() * greets.length);
+    return greets[randNum];
+  }, []); // No dependencies, so the function is stable
 
   useEffect(() => {
     const greetText = document.querySelector("#intro-text");
@@ -26,11 +27,10 @@ const Intro = () => {
 
     greetText.addEventListener("click", handleClick);
 
-    // Cleanup function to remove the event listener
     return () => {
       greetText.removeEventListener("click", handleClick);
     };
-  }, []); // Empty dependency array as `randomGreet` is now stable
+  }, [randomGreet]);
 
   return (
     <div id="intro-container">
