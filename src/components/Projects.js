@@ -12,12 +12,9 @@ const Projects = () => {
           <div className="med-text"></div>
           <ul className="sml-text">
             <li>
-              Description - We've a deck of 21 cards from 1 to 21. You play
-              against a computer by selecting a card. Selection of card has to
-              be done from the 3 immediate next cards of the last selected card.
-              Whoever has to pick card 21 loses the game.
+              Description - The Connect 4 game is a classic strategy game in which 2 players go head-to-head in a battle to own the grid! Players choose yellow or red discs. They drop the discs into the grid, starting in the middle or at the edge to stack their colored discs upwards, horizontally, or diagonally.
             </li>
-            <li>A single player card game that works on pattern recognition</li>
+            <li>Two players can play this game at a time</li>
             <li>JavaScript Library used React JS</li>
             <li>UI framework used Material UI</li>
             <li>Responsive Design</li>
@@ -39,16 +36,16 @@ const Projects = () => {
       <div className="project">
         <div id="clone-torrent"></div>
         <div className="project-text">
-          <div className="med-text">Website Clone - <span className="span-font"> 1337x Torrents</span></div>
+          <div className="med-text">Website Clone - <span className="span-font"> Netflix</span></div>
           <ul className="sml-text">
             <li>
-              A popular torrent site commonly used for searching and downloading
-              files off the internet
+              A clone of the basic UI of the popular netflix website. The clone shows popular shows and list of shows based on genere.
+              All the data that is displayed is fetched from the TMDB api.
+              This also features the fuctionality to watch trailers of the shows using react-youtube and react-trailer libraries.
             </li>
             <li>
               Technologies used HTML, Bootstrap CSS, and vanilla JavaScript
             </li>
-            <li>Integrated search bar with OMDB API</li>
             <li>Responsive Design</li>
           </ul>
           <div className="btn-group">
@@ -67,15 +64,16 @@ const Projects = () => {
 
       <div className="project">
         <div className="project-text">
-          <div className="med-text">Website Clone - <span className="span-font"> Google Search Page</span></div>
+          <div className="med-text"> Full-stack website- <span className="span-font"> CSV viewer</span></div>
           <ul className="sml-text">
             <li>
-            A searching site used for basic web searching 
+           Site allows you to upload and view them in tabular format.
+           Site also allows you to upload, delete your files for future purposes. 
             </li>
             <li>
-            JavaScript Library used React JS
+            Technologies used are MongoDB, Express-js, and Node
             </li>
-            <li>Integrated search bar with Web-Search API</li>
+            <li>Integrated with search facility based on you respective column of need.</li>
           </ul>
           <div className="btn-group">
             <Button
