@@ -1,30 +1,26 @@
 import Parallax from "./Parallax";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser"; //npm i @emailjs/browser
+import emailjs from "@emailjs/browser"; 
 
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+
     emailjs
-      .sendForm(
-        "service_yrsrbwp",
-        "template_5drlgue",
-        form.current,
-        "user_DZq5OEWPyAN4UReMR7Da3"
-      )
+      .sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, {
+        publicKey: process.env.REACT_APP_PUBLIC_KEY,
+      })
       .then(
-        (result) => {
-          console.log(result.text);
-          alert("Email Sent Successfully");
+        () => {
+          console.log('SUCCESS!');
         },
         (error) => {
-          console.log(error.text);
-          alert("Email Sent Unsuccessful!");
-        }
+          console.log('FAILED...', error.text);
+        },
       );
-    e.target.reset();
   };
+
   return (
     <section className="main-pad" id="contact">
       <div className="lrg-text" id="heading-contact">
@@ -41,7 +37,7 @@ const Contact = () => {
               <input
                 className="form-input"
                 type="text"
-                name="from_name"
+                name="user_name"
                 placeholder="Name"
                 required
               />
@@ -50,7 +46,7 @@ const Contact = () => {
               <input
                 className="form-input"
                 type="email"
-                name="from_email"
+                name="user_email"
                 placeholder="Email"
                 required
               />

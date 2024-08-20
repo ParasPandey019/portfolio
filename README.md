@@ -1,6 +1,6 @@
 # My Personal Portfolio Page
 
-A single page react app that aims to showcase my major front-end projects.
+A single page react app that aims to showcase some of my front-end projects.
 
 ______________________________________________________________________________________________________________________________________________________________________________
 
