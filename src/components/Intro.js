@@ -17,7 +17,7 @@ const Intro = () => {
     greetText.addEventListener("click", () => {
       setGreet(randomGreet);
     });
-  }, []);
+  }, [randomGreet]);
   return (
     <div id="intro-container">
       <div id="intro-text" style={{width: greet.breakAt}}>

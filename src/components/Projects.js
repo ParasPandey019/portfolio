@@ -1,5 +1,4 @@
 import Button from "./Button";
-import { useState } from "react";
 
 const Projects = () => {
   return (
@@ -9,6 +8,7 @@ const Projects = () => {
       </div>
       <div className="project">
         <div className="project-text">
+        <div className="med-text">Game of <span className="span-font"> Connect 4</span></div>
           <div className="med-text"></div>
           <ul className="sml-text">
             <li>
