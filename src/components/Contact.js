@@ -1,23 +1,27 @@
 import Parallax from "./Parallax";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser"; 
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, {
-        publicKey: process.env.REACT_APP_PUBLIC_KEY,
-      })
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
       .then(
         () => {
           console.log('SUCCESS!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.log('FAILED...');
+        }
       );
   };
 
